@@ -22,15 +22,24 @@ print("Muffin: $2.75")
 print("Bagels: $2.50")
 
 #Will ask user how much of each item they would like and how much tip
-number_of_coffees = input("How many coffees?")
-number_of_muffins = input("How many muffins?")
-number_of_bagels = input("How many bagels?")
-tip_percent = input("Enter tip precent (e.g., 10 for 10%):")
-tax_rate= 0.08875
+try:
+    number_of_coffees = input("How many coffees?")
+    print(f"{number_of_coffees} coffees")
+    number_of_muffins = input("How many muffins?")
+    print(f"{number_of_muffins} muffins")
+    number_of_bagels = input("How many bagels?")
+    print(f"{number_of_bagels} bagels")
+    tip_percent = input("Enter tip precent (e.g., 10 for 10%):")
+    print(f"{tip_percent} percent tip")
+except ValueError:
+    print("Sorry! Number is incvalid")
+    
+
 #Variables for the price of each individual item
 coffee_unitprice = 2.25
 muffins_unitprice = 2.75
 bagels_unitprice = 2.50
+tax_rate= 0.08875
 
 
 
